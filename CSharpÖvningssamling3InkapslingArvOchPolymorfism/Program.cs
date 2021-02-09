@@ -13,21 +13,21 @@ namespace CSharpÖvningssamling3InkapslingArvOchPolymorfism
 
             PersonHandler personHandler = new PersonHandler();
 
-            PrintWelcomeClient();
+          //PrintWelcomeClient();
             //HandleOptions(person, personHandler);
-
+            //HandleOptions(personHandler);
             //PrintOutPerson(person);
 
             //madePerson(person,personHandler);
 
-            CreatePerson(personHandler);
+            //CreatePerson(personHandler);
 
             ListOfAnimals();
 
-            printErrors();
-            
+            //printErrors();
 
-    //PrintOutPerson(person);
+
+            //PrintOutPerson(person);
         }
 
         static void CreatePerson(PersonHandler ph)
@@ -105,7 +105,8 @@ namespace CSharpÖvningssamling3InkapslingArvOchPolymorfism
 
 
         //Handles the menu optoions for the program
-        private static void HandleOptions(Person p, PersonHandler ph)
+        private static void HandleOptions(PersonHandler ph)
+        //private static void HandleOptions(Person p, PersonHandler ph)
         {
             //While true, menu will be running
             bool menuActual = true;
@@ -122,13 +123,11 @@ namespace CSharpÖvningssamling3InkapslingArvOchPolymorfism
                         string n;
                         PrintName();
                         n = Console.ReadLine();
-                        try { p.GetFName = n; }
-                        catch (Exception e) { Console.WriteLine("{0} Exception caught.", e);}
+                        //try { p.GetFName = n; }catch (Exception e) { Console.WriteLine("{0} Exception caught.", e);}
 
                         PrintLastName();
                         n = Console.ReadLine();
-                        try { p.GetLName = n; }
-                        catch (Exception e){Console.WriteLine("{0} Exception caught.", e);}
+                        //try { p.GetLName = n; }catch (Exception e){Console.WriteLine("{0} Exception caught.", e);}
 
                         int age;
                         PrintAge();
@@ -136,8 +135,7 @@ namespace CSharpÖvningssamling3InkapslingArvOchPolymorfism
                         if (ValuesOfStrings.IsStringInt(n))
                         {age = ValuesOfStrings.IntParsedValue(n);}
                         else { age = 0; }//matar in ett default int värde för att kunna ta emot ett värde i person klassen
-                        try { p.GetAge = age; }
-                        catch (Exception e) { Console.WriteLine("{0} Exception caught.", e); }
+                        //try { p.GetAge = age; }catch (Exception e) { Console.WriteLine("{0} Exception caught.", e); }
 
                         double height;
                         PrintHeight();
@@ -145,8 +143,7 @@ namespace CSharpÖvningssamling3InkapslingArvOchPolymorfism
                         if (ValuesOfStrings.IsStringDouble(n))
                         { height = ValuesOfStrings.DoubleParsedValue(n); }
                         else { height = 0.0; }//matar in ett default double värde för att kunna ta emot ett värde i person klassen
-                        try { p.GetHeight = height; }
-                        catch (Exception e) { Console.WriteLine("{0} Exception caught.", e); }
+                        //try { p.GetHeight = height; }catch (Exception e) { Console.WriteLine("{0} Exception caught.", e); }
 
                         double weight;
                         PrintWeight();
@@ -154,21 +151,20 @@ namespace CSharpÖvningssamling3InkapslingArvOchPolymorfism
                         if (ValuesOfStrings.IsStringDouble(n))
                         {weight = ValuesOfStrings.DoubleParsedValue(n);}
                         else { weight = 0.0; }//matar in ett default double värde för att kunna ta emot ett värde i person klassen
-                        try { p.GetWeight = weight; }
-                        catch (Exception e) { Console.WriteLine("{0} Exception caught.", e); }
+                        //try { p.GetWeight = weight; }catch (Exception e) { Console.WriteLine("{0} Exception caught.", e); }
                         
                         ValuesOfStrings.StrOut("\n" + "Thanx!");
-                        PrintOutPerson(p);
+                        //PrintOutPerson(p);
                         break;
 
                     case "2":
                         ValuesOfStrings.StrOut("2" + "\n");
-                        PrintOutPerson(p);
+                        //PrintOutPerson(p);
 
                         break;
                     case "3":
                         ValuesOfStrings.StrOut("3" + "\n");
-                        madePerson(p,ph);
+                        //madePerson(p,ph);
                         break;
 
 

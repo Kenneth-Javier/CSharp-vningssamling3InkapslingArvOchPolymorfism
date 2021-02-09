@@ -7,6 +7,5 @@ namespace CSharpÖvningssamling3InkapslingArvOchPolymorfism
     interface PersonInterface
     {
         public void Talk();
-       
     }
 }
